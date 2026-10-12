@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Service Quotation</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 35px 20px;
+      background-color: #f1f3f6;
+      font-family: "Times New Roman", Times, serif;
+      color: #252d3a;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .quotation {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #d9dee7;
+      padding: 48px 52px;
+    }
+
+    .header {
+      border-bottom: 3px solid #233d65;
+      padding-bottom: 22px;
+      margin-bottom: 30px;
+    }
+
+    .company-name {
+      margin: 0;
+      color: #233d65;
+      font-size: 28px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .document-title {
+      margin: 8px 0;
+      font-size: 23px;
+      font-weight: normal;
+    }
+
+    .reference {
+      color: #687386;
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .section {
+      margin: 28px 0;
+    }
+
+    .section-title {
+      color: #233d65;
+      font-size: 19px;
+      border-bottom: 1px solid #d9dee7;
+      padding-bottom: 7px;
+      margin-bottom: 14px;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 7px 0;
+      border-bottom: 1px solid #edf0f4;
+    }
+
+    .detail-label {
+      color: #5b6575;
+    }
+
+    .detail-value {
+      font-weight: bold;
+      text-align: right;
+      overflow-wrap: anywhere;
+    }
+
+    .total-box {
+      margin-top: 32px;
+      padding: 20px 24px;
+      border: 1px solid #c7d3e4;
+      border-left: 5px solid #233d65;
+      background: #f5f7fb;
+    }
+
+    .total-label {
+      margin: 0;
+      color: #5b6575;
+      font-size: 15px;
+    }
+
+    .total-amount {
+      margin: 4px 0 0;
+      font-size: 30px;
+      font-weight: bold;
+      color: #233d65;
+      overflow-wrap: anywhere;
+    }
+
+    .note {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid #d9dee7;
+      color: #687386;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    .footer {
+      margin-top: 35px;
+      text-align: center;
+      color: #687386;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+
+      .quotation {
+        padding: 25px 20px;
+      }
+
+      .detail-row {
+        gap: 12px;
+      }
+
+      .company-name {
+        font-size: 24px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+
+      .quotation {
+        max-width: none;
+        border: none;
+        padding: 25px;
+      }
+
+      .total-box {
+        background: #f5f7fb;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="quotation">
+
+    <header class="header">
+      <h1 class="company-name">AvenBiz Solutions</h1>
+      <h2 class="document-title">Business Service Quotation</h2>
+      <p class="reference">
+        Quotation Reference: BIZ-93
+      </p>
+    </header>
+
+    <section class="section">
+      <h3 class="section-title">Customer Information</h3>
+
+      <div class="detail-row">
+        <span class="detail-label">Customer Name</span>
+        <span class="detail-value">Milo</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-label">Company</span>
+        <span class="detail-value">GreenPath Enterprises</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-label">Quotation Date</span>
+        <span class="detail-value">12 October 2026</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3 class="section-title">Service Details</h3>
+
+      <div class="detail-row">
+        <span class="detail-label">Service Description</span>
+        <span class="detail-value">website automation services</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-label">Estimated Hours</span>
+        <span class="detail-value">15 hours</span>
+      </div>
+
+      <div class="detail-row">
+        <span class="detail-label">Hourly Rate</span>
+        <span class="detail-value">KES 1,800</span>
+      </div>
+    </section>
+
+    <div class="total-box">
+      <p class="total-label">Estimated Total Cost</p>
+      <p class="total-amount">KES 27,000</p>
+    </div>
+
+    <p class="note">
+      This is a preliminary estimate based on the service details provided.
+      Final pricing is subject to confirmation of the project scope and
+      agreed requirements.
+    </p>
+
+    <footer class="footer">
+      AvenBiz Solutions | Business Service Quotation
+    </footer>
+
+  </main>
+</body>
+</html>
